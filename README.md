@@ -110,3 +110,19 @@ public class Solution {
 	}
 }
 ```
+### 20. Valid Parentheses
+-- replace 括号
+``` java
+public class Solution {
+    public boolean isValid(String s) {
+        int l = 0;
+
+        while(l != s.length()){
+            l = s.length();
+            s = s.replace("()", "").replace("{}", "").replace("[]", "");
+        }
+
+        return l == 0;
+    }       
+}
+```
