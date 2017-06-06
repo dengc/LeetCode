@@ -142,7 +142,7 @@ public class Solution {
 }
 ```
 ### 21. Merge Two Sorted Lists
--- merge == 最小值
+-- Recursion: mergeTwoLists == 最小值
 ``` cpp
 class Solution {
 public:
@@ -164,4 +164,24 @@ public:
         }
     }
 };
+```
+### 26. Remove Duplicates from Sorted Array
+-- 加入不同element: 后面 > 前边，则加后面的
+``` java
+public class Solution {
+    public int removeDuplicates(int[] nums) {
+	    int l = nums.length;
+        if(l < 2){
+	        return l;
+        }
+        
+        l = 1;
+        for(int i = 1; i < nums.length; ++i) {
+            if(nums[i] != nums[i-1]) {
+                nums[l++] = nums[i];
+            }
+        }
+        return l;
+    }
+}
 ```
