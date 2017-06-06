@@ -268,3 +268,13 @@ public class Solution {
     }
 }
 ```
+### 58. Length of Last Word
+-- trim() 去首尾空格，lastIndexOf(" ")
+``` java
+public class Solution {
+    public int lengthOfLastWord(String s) {
+        s = s.trim();
+        return s.length() - 1 - s.lastIndexOf(" ");
+    }
+}
+```
