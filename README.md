@@ -15,10 +15,10 @@
 ``` java
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
-
+     
 		int[] result = new int[2];
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-
+		
 		for(int i = 0; i < nums.length; i++){
 		    if(map.containsKey(target - nums[i])){
 		        result[1] = i;
@@ -86,7 +86,7 @@ public class Solution {
 		}
 		return result;
     }
-
+    
     public int basicRomanInt(String s){
 		if(s.equals("I")){
 			return 1;
@@ -110,18 +110,33 @@ public class Solution {
 	}
 }
 ```
+### 14. Longest Common Prefix
+-- 
+``` cpp
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+        string prefix = "";
+        for(int idx=0; strs.size()>0; prefix+=strs[0][idx], idx++)
+            for(int i=0; i<strs.size(); i++)
+                if(idx >= strs[i].size() ||(i > 0 && strs[i][idx] != strs[i-1][idx]))
+                    return prefix;
+        return prefix;
+    }
+};
+```
 ### 20. Valid Parentheses
 -- replace 括号
 ``` java
 public class Solution {
     public boolean isValid(String s) {
         int l = 0;
-
+        
         while(l != s.length()){
             l = s.length();
             s = s.replace("()", "").replace("{}", "").replace("[]", "");
         }
-
+        
         return l == 0;
     }       
 }
