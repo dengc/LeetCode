@@ -210,7 +210,7 @@ public class Solution {
 }
 ```
 ### 35. Search Insert Position
--- indexOf
+-- 找大于等于target的index
 ``` java
 public class Solution {
     public int searchInsert(int[] nums, int target) {
@@ -220,6 +220,36 @@ public class Solution {
             }
         }
         return nums.length;
+    }
+}
+```
+### 38. Count and Say
+-- Recursion：前一个element. toCharArray()，count,  StringBuilder.append
+``` java
+public class Solution {
+    public String countAndSay(int n) {
+        if(n <= 1){
+            return "1";
+        }
+        StringBuilder sb = new StringBuilder();
+        String str = countAndSay(n - 1);
+        char cur = str.charAt(0);
+        int count = 1;
+        char[] arr = str.toCharArray();
+        for(int i = 1; i < arr.length; i++) {
+            if(cur == arr[i]) {
+                count++;
+            } 
+            else {
+                sb.append(count);
+                sb.append(cur);
+                cur = arr[i];
+                count = 1;
+            }
+        }
+        sb.append(count);
+        sb.append(cur);
+        return sb.toString();
     }
 }
 ```
