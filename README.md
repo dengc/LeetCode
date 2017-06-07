@@ -278,3 +278,24 @@ public class Solution {
     }
 }
 ```
+### 66. Plus One
+-- 逢9变0，非9最右边的数+1；（若全9）加一位，最左1 其余0
+``` java
+public class Solution {
+    public int[] plusOne(int[] digits) {
+        int l = digits.length;
+        while(l > 0 && digits[l - 1] == 9 ){
+            digits[l - 1] = 0;
+            l--;
+        }
+        if(l > 0){
+            digits[l - 1] += 1;
+            return digits;
+        }
+        l = digits.length;
+        int[] newDigits = new int[l+1];
+        newDigits[0] = 1;
+        return newDigits;
+    }
+}
+```
