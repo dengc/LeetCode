@@ -300,7 +300,7 @@ public class Solution {
 }
 ```
 ### 67. Add Binary
--- 
+-- StringBuilder, 
 ``` java
 public class Solution {
     public String addBinary(String a, String b) {
@@ -325,4 +325,14 @@ public class Solution {
         return sb.reverse().toString();
     }
 }
+```
+### 69. Sqrt(x)
+-- 
+``` python
+class Solution(object):
+    def mySqrt(self, x):
+        r = x
+        while r * r > x:
+            r = (r + x/r) / 2
+        return r
 ```
