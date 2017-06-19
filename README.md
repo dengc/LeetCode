@@ -365,18 +365,17 @@ class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
         ListNode *p = head;
-        ListNode *q = p;
-        if(head == NULL){
+        if(!head){
             return head;
         }
-        while(p->next!= NULL){
-            q = p->next;
+        while(p->next){
+            ListNode *q = p->next;
             if(p->val == q->val){
                 p->next = q->next;
                 delete q;
             }
             else{
-                p = p->next;
+                p = q;
             }
         }
         return head;
