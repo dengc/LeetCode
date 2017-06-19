@@ -358,3 +358,28 @@ public class Solution {
     }
 }
 ```
+### 83. Remove Duplicates from Sorted List
+-- 
+``` cpp
+class Solution {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {
+        ListNode *p = head;
+        ListNode *q = p;
+        if(head == NULL){
+            return head;
+        }
+        while(p->next!= NULL){
+            q = p->next;
+            if(p->val == q->val){
+                p->next = q->next;
+                delete q;
+            }
+            else{
+                p = p->next;
+            }
+        }
+        return head;
+    }
+};
+```
