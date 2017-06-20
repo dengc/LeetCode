@@ -337,7 +337,7 @@ class Solution(object):
         return r
 ```
 ### 70. Climbing Stairs
--- 
+-- new int[n+1]
 ``` java
 public class Solution {
     public int climbStairs(int n) {
@@ -381,4 +381,25 @@ public:
         return head;
     }
 };
+```
+### 88. Merge Sorted Array
+-- 最大数比较，大的存入A[index]
+``` java
+public class Solution {
+    public void merge(int A[], int m, int B[], int n) {
+        int indexA = m - 1 ;
+        int indexB = n - 1 ;
+        int index = m + n - 1 ;
+        while(indexA >= 0 && indexB >= 0){
+            if(A[indexA] > B[indexB]){
+                A[index--] = A[indexA--] ;
+            }else{
+                A[index--] = B[indexB--] ;
+            }
+        }
+        while(indexB >= 0){
+            A[index--] = B[indexB--] ;
+        }
+    }
+}
 ```
