@@ -404,7 +404,7 @@ public class Solution {
 }
 ```
 ### 100. Same Tree
--- Recursion: 自己的val --> 看左&&右
+-- Recursion: check Null -> 自己的val -> 看左&&右
 ``` cpp
 class Solution {
 public:
@@ -420,7 +420,7 @@ public:
 };
 ```
 ###101. Symmetric Tree
--- Recursion: (new Method 2 parameters) 自己的val && 看左&&右
+-- Recursion: (new Method 2 parameters) check Null ->自己的val && 看左&&右
 ``` cpp
 class Solution {
 public:
@@ -434,6 +434,19 @@ public:
         }
         return (t1->val == t2->val) && isSym(t1->left, t2->right) && isSym(t2->left, t1->right);
         
+    }
+};
+```
+###104. Maximum Depth of Binary Tree
+-- Recursion: check Null -> 1+ max(左，右)
+``` cpp
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if(root == NULL){
+            return 0;
+        }
+        return 1 + max(maxDepth(root->left), maxDepth(root->right));
     }
 };
 ```
