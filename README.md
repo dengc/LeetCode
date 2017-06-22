@@ -419,3 +419,21 @@ public:
     }
 };
 ```
+###101. Symmetric Tree
+-- Recursion: (new Method 2 parameters) 自己的val && 看左&&右
+``` cpp
+class Solution {
+public:
+    bool isSymmetric(TreeNode* root) {
+        return isSym(root, root);
+    }
+    
+    bool isSym(TreeNode* t1, TreeNode* t2){
+        if(t1 == NULL || t2 == NULL){
+            return (t1 == t2);
+        }
+        return (t1->val == t2->val) && isSym(t1->left, t2->right) && isSym(t2->left, t1->right);
+        
+    }
+};
+```
