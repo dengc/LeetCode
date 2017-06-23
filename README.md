@@ -450,3 +450,45 @@ public:
     }
 };
 ```
+###107. Binary Tree Level Order Traversal II
+-- Recursion: check Null -> 1+ max(左，右)
+``` cpp
+public class Solution {
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        LinkedList<List<Integer>> res = new LinkedList<List<Integer>>();
+        add(res, 0, root);
+        return res;
+    }
+    
+    public void add(LinkedList<List<Integer>> list, int l, TreeNode n){
+        if(n == null){
+            return;
+        }
+        if(list.size() - 1 < l){
+            list.addFirst(new LinkedList<Integer>());
+        }
+        list.get(list.size() - 1 - l).add(n.val);
+        add(list, l+1, n.left);
+        add(list, l+1, n.right);
+    }
+}
+```
+###198. House Robber
+-- max(带自己, 不带自己)
+``` cpp
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        int l = nums.size();
+        vector<int> result(l+1, 0);
+        if(l == 0){
+            return 0;
+        }
+        result[1] = nums[0];
+        for(int i = 2; i < l+1; i++){
+            result[i] = max(nums[i-1] + result[i-2], result[i-1]);
+        }
+        return result[l];
+    }
+};
+```
