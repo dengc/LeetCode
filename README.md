@@ -474,7 +474,7 @@ public class Solution {
 }
 ```
 ###108. Convert Sorted Array to Binary Search Tree
--- 
+-- Recursive: 中间node, build left & right
 ``` java
 public class Solution {
     public TreeNode sortedArrayToBST(int[] nums) {
@@ -492,6 +492,28 @@ public class Solution {
         return n;
     }
 }
+```
+###110. Balanced Binary Tree
+-- Recursive
+``` cpp
+class Solution {
+public:
+    bool isBalanced(TreeNode* root) {
+        if(root == NULL){
+            return true;
+        }
+        int left = depth(root->left);
+        int right = depth(root->right);
+        return abs(left-right) <= 1 && isBalanced(root->left) && isBalanced(root->right);
+    }
+    
+    int depth(TreeNode* root) {
+        if(root == NULL){
+            return 0;
+        }
+        return max(depth(root->left), depth(root->right)) + 1;
+    }
+};
 ```
 ###198. House Robber
 -- max(带自己, 不带自己)
