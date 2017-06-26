@@ -473,6 +473,26 @@ public class Solution {
     }
 }
 ```
+###108. Convert Sorted Array to Binary Search Tree
+-- 
+``` java
+public class Solution {
+    public TreeNode sortedArrayToBST(int[] nums) {
+        return build(nums, 0, nums.length -1);
+    }
+    
+    public TreeNode build(int[] nums, int low, int high){
+        if(low > high){
+            return null;
+        }
+        int mid = (low + high) / 2;
+        TreeNode n = new TreeNode(nums[mid]);
+        n.left = build(nums, low, mid - 1);
+        n.right = build(nums, mid + 1, high);
+        return n;
+    }
+}
+```
 ###198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
