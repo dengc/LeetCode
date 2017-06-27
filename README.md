@@ -515,6 +515,32 @@ public:
     }
 };
 ```
+###111. Minimum Depth of Binary Tree
+-- Recursive: 左右；注意一边没有的情况
+``` cpp
+class Solution {
+public:
+    int minDepth(TreeNode* root) {
+        if(root == NULL){
+            return 0;
+        }
+        int dep = 1;
+        TreeNode* left = root->left;
+        TreeNode* right = root->right;
+        if(left == NULL){
+            dep = 1 + minDepth(right);
+        }
+        else if(right == NULL){
+            dep = 1 + minDepth(left);
+        }
+        else{
+            dep = min(minDepth(left), minDepth(right)) + 1;
+        }
+        
+        return dep;
+    }
+};
+```
 ###198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
