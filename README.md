@@ -541,6 +541,26 @@ public:
     }
 };
 ```
+###112. Path Sum
+-- Recursive: 左or右，sum - root
+``` cpp
+class Solution {
+public:
+    bool hasPathSum(TreeNode* root, int sum) {
+        if(root == NULL){
+            return false;
+        }
+        int rest = sum - root->val;
+        TreeNode *left = root->left;
+        TreeNode *right = root->right;
+        if(root->val == sum && right == NULL && left == NULL){
+            return true;
+        }
+        
+        return hasPathSum(left, rest) || hasPathSum(right, rest);
+    }
+};
+```
 ###198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
