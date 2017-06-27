@@ -451,7 +451,7 @@ public:
 };
 ```
 ###107. Binary Tree Level Order Traversal II
---
+-- Recursive
 ``` cpp
 public class Solution {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
@@ -560,6 +560,28 @@ public:
         return hasPathSum(left, rest) || hasPathSum(right, rest);
     }
 };
+```
+###121. Best Time to Buy and Sell Stock
+-- 找min，比较max和 当前 － 最小
+``` java
+public class Solution {
+    public int maxProfit(int[] prices) {
+        if(prices.length == 0){
+            return 0;
+        }
+        int min = prices[0];
+        int max = 0;
+        for(int i = 1; i < prices.length; i++){
+            if(prices[i] < min){
+                min = prices[i];
+            }
+            if(prices[i] - min > max){
+                max = prices[i] - min;
+            }
+        }
+        return max;
+    }
+}
 ```
 ###198. House Robber
 -- max(带自己, 不带自己)
