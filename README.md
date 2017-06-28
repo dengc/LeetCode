@@ -579,6 +579,24 @@ public:
     }
 };
 ```
+### 119. Pascal's Triangle II
+-- return the row of result[i][j]
+``` cpp
+class Solution {
+public:
+    vector<int> getRow(int rowIndex) {
+        vector<vector<int>> result(rowIndex + 1);
+        for(int i = 0; i < rowIndex + 1; i++){
+            result[i].resize(i + 1);
+            result[i][0] = result[i][i] = 1;
+            for(int j = 1; j < i; j++){
+                result[i][j] = result[i - 1][j - 1] + result[i - 1][j];
+            }
+        }
+        return result[rowIndex];
+    }
+};
+```
 ### 121. Best Time to Buy and Sell Stock
 -- 找min，比较max和 当前 － 最小
 ``` java
