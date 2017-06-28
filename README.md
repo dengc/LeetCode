@@ -583,6 +583,21 @@ public class Solution {
     }
 }
 ```
+### 122. Best Time to Buy and Sell Stock II
+-- 只加增的
+``` java
+public class Solution {
+    public int maxProfit(int[] prices) {
+        int result = 0;
+        for(int i = 0; i < prices.length - 1; i++){
+            if(prices[i] < prices[i + 1]){
+                result += prices[i + 1] - prices[i];
+            }
+        }
+        return result;
+    }
+}
+```
 ### 198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
