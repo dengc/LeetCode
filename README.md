@@ -709,6 +709,34 @@ public:
     }
 };
 ```
+### 167. Two Sum II - Input array is sorted
+-- 首尾相加比较
+``` java
+public class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int[] res = new int[2];
+        if(numbers == null || numbers.length < 2){
+            return res;
+        }
+        int l = 0;
+        int r = numbers.length - 1;
+        while(l < r){
+            if(numbers[l] + numbers[r] == target){
+                res[0] = l + 1;
+                res[1] = r + 1;
+                return res;
+            }
+            if(numbers[l] + numbers[r] > target){
+                r--;
+            }
+            else{
+                l++;
+            }
+        }
+        return res;
+    }
+}
+```
 ### 198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
