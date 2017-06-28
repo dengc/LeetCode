@@ -692,6 +692,23 @@ public:
     }
 };
 ```
+### 155. Min Stack
+
+### 160. Intersection of Two Linked Lists
+-- 逐一比较，null了则换到对面的head
+``` cpp
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        ListNode *a = headA, *b = headB;
+        while (a != b){
+            a = a?a->next:headB;
+            b = b?b->next:headA;
+        }
+        return a;
+    }
+};
+```
 ### 198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
