@@ -598,6 +598,27 @@ public class Solution {
     }
 }
 ```
+### 141. Linked List Cycle
+-- s->next == f->next->next
+``` cpp
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        ListNode* slow = head, *fast = head;
+        while(slow && fast){
+            slow = slow->next;
+            if(fast->next == NULL) {
+                return false;
+            }
+            fast = fast->next->next;
+            if(slow == fast){
+                return true;
+            }
+        }
+        return false;
+    }
+};
+```
 ### 198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
