@@ -598,6 +598,19 @@ public class Solution {
     }
 }
 ```
+### 136. Single Number
+-- ^= (bitwise XOR)
+``` java
+public class Solution {
+    public int singleNumber(int[] nums) {
+        int res = 0;
+        for(int n : nums){
+            res ^= n;
+        }
+        return res;
+    }
+}
+```
 ### 141. Linked List Cycle
 -- s->next == f->next->next
 ``` cpp
