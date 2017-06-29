@@ -766,6 +766,13 @@ public:
     }
 };
 ```
+### 175. Combine Two Tables
+-- left join
+``` sql
+SELECT Person.FirstName, Person.LastName, Address.City, Address.State
+FROM Person 
+LEFT JOIN Address on Person.PersonId = Address.PersonId;
+```
 ### 198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
