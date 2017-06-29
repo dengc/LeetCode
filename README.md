@@ -851,3 +851,28 @@ public:
     }
 };
 ```
+### 203. Remove Linked List Elements
+-- p->next 和 val 比
+``` cpp
+class Solution {
+public:
+    ListNode* removeElements(ListNode* head, int val) {
+        if (head == NULL){
+            return NULL;
+        }
+        ListNode* p = head;
+        while(p->next != NULL){
+            if (p->next->val == val){
+                p->next = p->next->next;
+            }
+            else{
+                p = p->next;
+            }
+        }
+        if (head->val == val){
+            head=head->next;
+        }
+        return head;
+    }
+};
+```
