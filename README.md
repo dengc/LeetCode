@@ -804,6 +804,20 @@ LEFT JOIN Orders o
 ON c.ID = o.CustomerID
 Where o.id is null
 ```
+### 191. Number of 1 Bits
+-- &(bitwise and) -> n & n-1
+``` java
+public class Solution {
+    public int hammingWeight(int n) {
+        int count = 0;
+        while(n != 0){
+            n = n & (n-1);
+            count++;
+        }
+        return count;
+    }
+}
+```
 ### 196. Delete Duplicate Emails
 -- Delete table from 2 tables
 ``` sql
