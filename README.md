@@ -804,10 +804,16 @@ LEFT JOIN Orders o
 ON c.ID = o.CustomerID
 Where o.id is null
 ```
+### 196. Delete Duplicate Emails
+-- Delete table from 2 tables
+``` sql
+DELETE p1
+FROM Person p1, Person p2
+WHERE p1.Id > p2.Id && p1.Email = p2.Email
+```
 ### 197. Rising Temperature
 -- DATEDIFF
 ``` sql
-# Write your MySQL query statement below
 SELECT w1.ID
 FROM Weather w1, Weather w2
 WHERE DATEDIFF(w1.Date, w2.Date) = 1 && w1.Temperature > w2.Temperature
