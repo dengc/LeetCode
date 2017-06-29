@@ -773,6 +773,13 @@ SELECT Person.FirstName, Person.LastName, Address.City, Address.State
 FROM Person 
 LEFT JOIN Address on Person.PersonId = Address.PersonId;
 ```
+### 176. Second Highest Salary
+-- 小于max -> max
+``` sql
+SELECT Max(Salary) as SecondHighestSalary
+FROM Employee
+WHERE Salary < (SELECT Max(Salary) FROM Employee)
+```
 ### 198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
