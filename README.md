@@ -780,6 +780,13 @@ SELECT Max(Salary) as SecondHighestSalary
 FROM Employee
 WHERE Salary < (SELECT Max(Salary) FROM Employee)
 ```
+### 181. Employees Earning More Than Their Managers
+-- 2个自己table
+``` sql
+SELECT e1.Name as Employee
+FROM Employee e1, Employee e2
+WHERE e1.ManagerID = e2.ID && e1.Salary > e2.Salary
+```
 ### 198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
