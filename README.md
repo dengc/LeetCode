@@ -804,6 +804,14 @@ LEFT JOIN Orders o
 ON c.ID = o.CustomerID
 Where o.id is null
 ```
+### 197. Rising Temperature
+-- DATEDIFF
+``` sql
+# Write your MySQL query statement below
+SELECT w1.ID
+FROM Weather w1, Weather w2
+WHERE DATEDIFF(w1.Date, w2.Date) = 1 && w1.Temperature > w2.Temperature
+```
 ### 198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
