@@ -737,6 +737,35 @@ public class Solution {
     }
 }
 ```
+### 168. Excel Sheet Column Title
+
+### 169. Majority Element
+-- sort -> middle one
+``` java
+public class Solution {
+    public int majorityElement(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length/2];
+    }
+}
+```
+### 171. Excel Sheet Column Number
+
+### 172. Factorial Trailing Zeroes
+-- 有多少个5
+``` cpp
+class Solution {
+public:
+    int trailingZeroes(int n) {
+        int res = 0;
+        while(n){
+            n /= 5;
+            res += n;
+        }
+        return res;
+    }
+};
+```
 ### 198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
