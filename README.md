@@ -795,6 +795,15 @@ FROM Person
 GROUP BY Email
 HAVING count(*) >1
 ```
+### 183. Customers Who Never Order
+-- left - inner <==> 被join的id = null
+``` sql
+SELECT Name as Customers
+FROM Customers as c
+LEFT JOIN Orders o
+ON c.ID = o.CustomerID
+Where o.id is null
+```
 ### 198. House Robber
 -- max(带自己, 不带自己)
 ``` cpp
