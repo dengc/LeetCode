@@ -851,6 +851,32 @@ public:
     }
 };
 ```
+### 202. Happy Number
+-- set to store 算过的数 避免循环
+``` java
+public class Solution {
+    public boolean isHappy(int n) {
+        Set<Integer> visited = new HashSet<>();
+        visited.add(1);
+        
+        while(!visited.contains(n)){
+            visited.add(n);
+            int sum = 0;
+            while(n>0){
+                int digit = n%10;
+                sum += digit*digit;
+                n /=10;
+            }
+            n = sum;
+        }
+        
+        if(n==1)
+            return true;
+        else
+            return false;
+    }
+}
+```
 ### 203. Remove Linked List Elements
 -- p->next 和 val 比
 ``` cpp
