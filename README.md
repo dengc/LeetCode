@@ -852,28 +852,21 @@ public:
 };
 ```
 ### 202. Happy Number
--- set to store 算过的数 避免循环
+-- HashSet to store 算过的数 避免循环
 ``` java
 public class Solution {
     public boolean isHappy(int n) {
-        Set<Integer> visited = new HashSet<>();
-        visited.add(1);
-        
-        while(!visited.contains(n)){
-            visited.add(n);
+        HashSet<Integer> set = new HashSet<>();
+        while (set.add(n)) {
             int sum = 0;
-            while(n>0){
-                int digit = n%10;
-                sum += digit*digit;
-                n /=10;
+            while (n != 0) {
+                sum += (n%10)*(n%10);
+                n /= 10;
             }
+            if (sum == 1) return true;
             n = sum;
         }
-        
-        if(n==1)
-            return true;
-        else
-            return false;
+        return false;
     }
 }
 ```
