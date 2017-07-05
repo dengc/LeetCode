@@ -913,3 +913,19 @@ public:
     }
 };
 ```
+### 217. Contains Duplicate
+-- Set contains
+``` java
+public class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        Set<Integer> res = new HashSet<Integer>();
+        for(int num : nums){
+            if(res.contains(num)){
+                return true;
+            }
+            res.add(num);
+        }
+        return false;
+    }
+}
+```
