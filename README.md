@@ -852,7 +852,7 @@ public:
 };
 ```
 ### 202. Happy Number
--- HashSet to store 算过的数 避免循环
+-- Hashset to store 算过的数 避免循环
 ``` java
 public class Solution {
     public boolean isHappy(int n) {
@@ -892,6 +892,24 @@ public:
             head=head->next;
         }
         return head;
+    }
+};
+```
+### 205. Isomorphic Strings
+-- char可做array的index！
+``` c++
+class Solution {
+public:
+    bool isIsomorphic(string s, string t) {
+        int m1[256] = {0}, m2[256] = {0}, l = s.size();
+        for (int i = 0; i < l; i++) {
+            if (m1[s[i]] != m2[t[i]]){
+                return false;  
+            }
+            m1[s[i]] = i + 1;
+            m2[t[i]] = i + 1;
+        }
+        return true;
     }
 };
 ```
