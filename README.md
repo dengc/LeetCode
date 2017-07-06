@@ -967,3 +967,13 @@ public:
     }
 };
 ```
+### 231. Power of Two
+-- bit and: 2的指数都为1后面n个0
+``` cpp
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        return (n > 0) && !(n & (n - 1));
+    }
+};
+```
