@@ -929,7 +929,6 @@ public class Solution {
     }
 }
 ```
-
 ### 219. Contains Duplicate II
 -- Map containsKey
 ``` java
@@ -945,4 +944,26 @@ public class Solution {
         return false;
     }
 }
+```
+### 226. Invert Binary Tree
+-- Recursive: invert(left), invert(right)
+``` cpp
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        TreeNode* res = root;
+        invert(res);
+        return root;
+    }
+    void invert(TreeNode* root) {
+        TreeNode* res = root;
+        if(res){
+            TreeNode* temp = res->left;
+            res->left = res->right;
+            res->right = temp;
+            invert(res->left);
+            invert(res->right);
+        }
+    }
+};
 ```
