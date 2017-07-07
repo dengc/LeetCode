@@ -982,6 +982,22 @@ public:
 ``` cpp
 
 ```
+### 235. Lowest Common Ancestor of a Binary Search Tree
+-- 严格bst（左边小于root，右边大于root)：Recursive: 左or右 取代 root
+``` cpp
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if(root->val < min(p->val, q->val)){
+            return lowestCommonAncestor(root->right, p, q);
+        }
+        if(root->val > max(p->val, q->val)){
+            return lowestCommonAncestor(root->left, p, q);
+        }
+        return root;
+    }
+};
+```
 ### 237. Delete Node in a Linked List
 -- next = 再下一个
 ``` java
@@ -1023,7 +1039,8 @@ public class Solution {
             return false;
         }
         while(num % 2 == 0){
-            num /= 2;
+            //除以2的1次方
+            num = num << 1;
         }
         while(num % 3 == 0){
             num /= 3;
