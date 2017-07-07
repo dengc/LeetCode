@@ -977,3 +977,30 @@ public:
     }
 };
 ```
+### 234. Palindrome Linked List
+-- 
+``` cpp
+
+```
+### 242. Valid Anagram
+-- char可做array的index！一加一减
+``` java
+public class Solution {
+    public boolean isAnagram(String s, String t) {
+        if(s.length() != t.length()){
+            return false;
+        }
+        int[] alph = new int[26];
+        for(char ch : s.toCharArray()){
+            alph[ch - 'a']++;
+        }
+        for(char ch : t.toCharArray()){
+            alph[ch - 'a']--;
+            if(alph[ch - 'a'] < 0){
+                return false; 
+            } 
+        }
+        return true;
+    }
+}
+```
