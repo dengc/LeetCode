@@ -982,6 +982,16 @@ public:
 ``` cpp
 
 ```
+### 237. Delete Node in a Linked List
+-- 再下一个
+``` java
+public class Solution {
+    public void deleteNode(ListNode node) {
+        node.val = node.next.val;
+        node.next = node.next.next;
+    }
+}
+```
 ### 242. Valid Anagram
 -- char可做array的index！一加一减
 ``` java
