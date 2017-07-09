@@ -895,6 +895,11 @@ public:
     }
 };
 ```
+### 204. Count Primes
+-- 
+``` c++
+
+```
 ### 205. Isomorphic Strings
 -- char可做array的index！
 ``` c++
