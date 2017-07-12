@@ -25,13 +25,26 @@ public class Solution {
     }
 }
 ```
-
 ### 344. Reverse String
 -- StringBuffer
 ``` java
 public class Solution {
     public String reverseString(String s) {
         return new StringBuffer(s).reverse().toString();
+    }
+}
+```
+### 633. Sum of Square Numbers
+-- 判断整数：floor == 自己？
+``` java
+public class Solution {
+    public boolean judgeSquareSum(int c) {
+        for(int i = 0; i <= Math.sqrt(c); i++){
+            if(Math.floor(Math.sqrt(c - i * i)) == Math.sqrt(c - i * i)){
+                return true;
+            }
+        }
+        return false;
     }
 }
 ```
