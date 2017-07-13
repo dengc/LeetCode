@@ -86,6 +86,20 @@ public:
     }
 };
 ```
+### 504. Base 7
+-- %进制base = 每一位，while(/base)
+``` cpp
+class Solution {
+public:
+    string convertToBase7(int num) {
+        int n = abs(num); string res;
+        do{
+            res = to_string(n % 7) + res;
+        } while(n /= 7);
+        return num >= 0 ? res : '-' + res;   
+    }
+};
+```
 ### 628. Maximum Product of Three Numbers
 -- sort, 后3 or 后1前2
 ``` java
