@@ -34,6 +34,17 @@ public class Solution {
     }
 }
 ```
+### 628. Maximum Product of Three Numbers
+-- sort, 后3 or 后1前2
+``` java
+public class Solution {
+    public int maximumProduct(int[] nums) {
+        Arrays.sort(nums);
+        int l = nums.length;
+        return Math.max(nums[l-1] * nums[l-2] * nums[l-3], nums[l-1]*nums[0]*nums[1]);
+    }
+}
+```
 ### 633. Sum of Square Numbers
 -- 判断整数：floor == 自己？
 ``` java
