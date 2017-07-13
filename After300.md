@@ -59,3 +59,32 @@ public class Solution {
     }
 }
 ```
+### 637. Average of Levels in Binary Tree
+-- queue push & pop
+``` cpp
+class Solution {
+public:
+    vector<double> averageOfLevels(TreeNode* root) {
+        vector<double> res;
+        queue<TreeNode*> q;
+        q.push(root);
+        while(!q.empty()){
+            double sum = 0;
+            int l = q.size();
+            for(int i = 0; i < l; i++){
+                sum += q.front()->val;
+                if(q.front()->left){
+                    q.push(q.front()->left);
+                }
+                if(q.front()->right){
+                    q.push(q.front()->right);
+                }
+                q.pop();
+            }
+            sum /= l;
+            res.push_back(sum);
+        }
+        return res;
+    }
+};
+```
