@@ -34,6 +34,36 @@ public class Solution {
     }
 }
 ```
+### 414. Third Maximum Number
+-- long, m1 & m2 & m3
+``` java
+public class Solution {
+    public int thirdMax(int[] nums) {
+        int m1 = nums[0];
+        long m2 = Long.MIN_VALUE;
+        long m3 = Long.MIN_VALUE;
+        int l = nums.length;
+        for(int i = 1; i < l; i++){
+            if(nums[i] > m1){
+                m3 = m2;
+                m2 = m1;
+                m1 = nums[i];
+            }
+            else if(nums[i] < m1 && nums[i] > m2){
+                m3 = m2;
+                m2 = nums[i];
+            }
+            else if(nums[i] < m2 && nums[i] > m3){
+                m3 = nums[i];
+            }
+        }
+        if(m3 > Long.MIN_VALUE){
+            return (int) m3;
+        }
+        return m1;
+    }
+}
+```
 ### 628. Maximum Product of Three Numbers
 -- sort, 后3 or 后1前2
 ``` java
