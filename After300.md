@@ -100,6 +100,22 @@ public:
     }
 };
 ```
+### 507. Perfect Number
+-- sum += i + (num / i)
+``` cpp
+class Solution {
+public:
+    bool checkPerfectNumber(int num) {
+        int sum = 1;
+        for(int i = 2; i <= (int) sqrt(num); i++){
+            if(num % i == 0){
+                sum += i + (num / i);
+            }
+        }
+        return sum == num && num != 1;
+    }
+};
+```
 ### 628. Maximum Product of Three Numbers
 -- sort, 后3 or 后1前2
 ``` java
