@@ -58,6 +58,36 @@ public class Solution {
     }
 }
 ```
+### 350. Intersection of Two Arrays II
+-- map & arraylist
+``` java
+public class Solution {
+    public int[] intersect(int[] nums1, int[] nums2) {
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for(int num : nums1){
+            if(!map.containsKey(num)){
+                map.put(num, 1);
+            }
+            else{
+                map.put(num, map.get(num) + 1);
+            }
+        }
+        ArrayList<Integer> alist = new ArrayList<Integer>();
+        for(int num : nums2){
+            if(map.containsKey(num) && map.get(num) > 0){
+                alist.add(num);
+                map.put(num, map.get(num) - 1);
+            }
+        }
+        int l = alist.size();
+        int[] res = new int[l];
+        for(int i = 0; i < l; i++){
+            res[i] = alist.get(i);
+        }
+        return res;
+    }
+}
+```
 ### 414. Third Maximum Number
 -- long, m1 & m2 & m3
 ``` java
