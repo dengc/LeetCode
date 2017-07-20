@@ -34,6 +34,41 @@ public class Solution {
     }
 }
 ```
+### 345. Reverse Vowels of a String
+-- char[] -> new string(ch)
+``` java
+public class Solution {
+    public String reverseVowels(String s) {
+        Set<Character> vowels = new HashSet<Character>();
+        vowels.add('a');
+        vowels.add('e');
+        vowels.add('i');
+        vowels.add('o');
+        vowels.add('u');
+        vowels.add('A');
+        vowels.add('E');
+        vowels.add('I');
+        vowels.add('O');
+        vowels.add('U');
+        ArrayList<Character> alist = new ArrayList<Character>();
+        char[] ch = s.toCharArray();
+        int l = s.length();
+        for(int i = 0; i < l; i++){
+            if(vowels.contains(ch[i])){
+                alist.add(ch[i]);
+            }
+        }
+        int aSize = alist.size();
+        for(int i = 0; i < l; i++){
+            if(vowels.contains(ch[i])){
+                ch[i] = alist.get(--aSize);
+            }
+        }
+        String res = new String(ch);
+        return res;
+    }
+}
+```
 ### 349. Intersection of Two Arrays
 -- set & arraylist
 ``` java
