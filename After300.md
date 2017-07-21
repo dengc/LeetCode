@@ -155,6 +155,21 @@ public class Solution {
     }
 }
 ```
+### 371. Sum of Two Integers
+-- ^, &, <<1
+``` java
+public class Solution {
+    public int getSum(int a, int b) {
+        if(b == 0){
+            return a;
+        }
+        int sum, carry;
+        sum = a ^ b;
+        carry = (a & b) << 1;
+        return getSum(sum, carry);
+    }
+}
+```
 ### 414. Third Maximum Number
 -- long, m1 & m2 & m3
 ``` java
