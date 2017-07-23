@@ -155,6 +155,19 @@ public class Solution {
     }
 }
 ```
+### 367. Valid Perfect Square
+-- r = (r + num / r) / 2
+``` java
+public class Solution {
+    public boolean isPerfectSquare(int num) {
+        long r = num;
+        while(r * r > num){
+            r = (r + num / r) / 2;
+        }
+        return r * r == num;
+    }
+}
+```
 ### 371. Sum of Two Integers
 -- ^, &, <<1
 ``` java
