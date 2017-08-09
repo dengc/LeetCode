@@ -290,7 +290,6 @@ public class Solution {
     }
 }
 ```
-
 ### 637. Average of Levels in Binary Tree
 -- queue push & pop
 ``` cpp
