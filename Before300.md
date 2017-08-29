@@ -16,17 +16,17 @@
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
      
-        int[] result = new int[2];
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        
-        for(int i = 0; i < nums.length; i++){
-            if(map.containsKey(target - nums[i])){
-                result[1] = i;
-                result[0] = map.get(target - nums[i]);
-            }
-            map.put(nums[i],i);
-        }
-        return result;
+		int[] result = new int[2];
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		
+		for(int i = 0; i < nums.length; i++){
+		    if(map.containsKey(target - nums[i])){
+		        result[1] = i;
+		        result[0] = map.get(target - nums[i]);
+		    }
+		    map.put(nums[i],i);
+		}
+		return result;
     }
 }
 ```
@@ -35,15 +35,15 @@ public class Solution {
 ``` java
 public class Solution {
     public static int reverse(int x) {
-        long result = 0;
-        while(x != 0){
-            result = x % 10 + result * 10;
-            x /= 10;
-        }
-        if(result > Integer.MAX_VALUE || result < Integer.MIN_VALUE ){
-            return 0;
-        }
-        return (int) result;
+		long result = 0;
+		while(x != 0){
+			result = x % 10 + result * 10;
+			x /= 10;
+		}
+		if(result > Integer.MAX_VALUE || result < Integer.MIN_VALUE ){
+			return 0;
+		}
+		return (int) result;
     }
 }
 ```
@@ -59,9 +59,9 @@ public class Solution {
         char[] nums = word.toCharArray();
         int l = word.length();
         for(int i = 0; i <= l/2; i++){
-            if(nums[i] != nums[l-1-i]){
-                return false;
-            }
+        	if(nums[i] != nums[l-1-i]){
+        		return false;
+        	}
         }
         return true;
     }
@@ -73,41 +73,41 @@ public class Solution {
 public class Solution {
     public int romanToInt(String s) {
         int l = s.length();
-        int result = 0;
-        for(int i = 0; i < l; i++){
-            int num1 = basicRomanInt(s.substring(i,i+1));
-            if(i < l-1){
-                int num2 = basicRomanInt(s.substring(i+1,i+2));
-                if(num1 < num2){
-                    num1 = -num1;
-                }
-            }
-            result += num1;
-        }
-        return result;
+		int result = 0;
+		for(int i = 0; i < l; i++){
+			int num1 = basicRomanInt(s.substring(i,i+1));
+			if(i < l-1){
+				int num2 = basicRomanInt(s.substring(i+1,i+2));
+				if(num1 < num2){
+					num1 = -num1;
+				}
+			}
+			result += num1;
+		}
+		return result;
     }
     
     public int basicRomanInt(String s){
-        if(s.equals("I")){
-            return 1;
-        }
-        if(s.equals("V")){
-            return 5;
-        }
-        if(s.equals("X")){
-            return 10;
-        }
-        if(s.equals("L")){
-            return 50;
-        }
-        if(s.equals("C")){
-            return 100;
-        }
-        if(s.equals("D")){
-            return 500;
-        }
-        return 1000;
-    }
+		if(s.equals("I")){
+			return 1;
+		}
+		if(s.equals("V")){
+			return 5;
+		}
+		if(s.equals("X")){
+			return 10;
+		}
+		if(s.equals("L")){
+			return 50;
+		}
+		if(s.equals("C")){
+			return 100;
+		}
+		if(s.equals("D")){
+			return 500;
+		}
+	    return 1000;
+	}
 }
 ```
 ### 14. Longest Common Prefix
@@ -170,9 +170,9 @@ public:
 ``` java
 public class Solution {
     public int removeDuplicates(int[] nums) {
-        int l = nums.length;
+	    int l = nums.length;
         if(l < 2){
-            return l;
+	        return l;
         }
         
         l = 1;
@@ -215,11 +215,11 @@ public class Solution {
 public class Solution {
     public int searchInsert(int[] nums, int target) {
         for(int i = 0; i < nums.length; i++){
-            if(nums[i] >= target){
-                return i;
-            }
-        }
-        return nums.length;
+			if(nums[i] >= target){
+				return i;
+			}
+		}
+		return nums.length;
     }
 }
 ```
@@ -229,8 +229,8 @@ public class Solution {
 public class Solution {
     public String countAndSay(int n) {
         if(n <= 1){
-            return "1";
-        }
+			return "1";
+		}
         StringBuilder sb = new StringBuilder();
         String str = countAndSay(n - 1);
         char cur = str.charAt(0);
@@ -259,12 +259,12 @@ public class Solution {
 public class Solution {
     public int maxSubArray(int[] nums) {
         int max = nums[0];
-        int maxWith = max;
-        for(int i = 1; i < nums.length; i++){
-            maxWith = Math.max(maxWith + nums[i], nums[i]);
-            max = Math.max(max, maxWith);
-        }
-        return max;
+		int maxWith = max;
+		for(int i = 1; i < nums.length; i++){
+			maxWith = Math.max(maxWith + nums[i], nums[i]);
+			max = Math.max(max, maxWith);
+		}
+		return max;
     }
 }
 ```
@@ -284,18 +284,18 @@ public class Solution {
 public class Solution {
     public int[] plusOne(int[] digits) {
         int l = digits.length;
-        while(l > 0 && digits[l - 1] == 9 ){
-            digits[l - 1] = 0;
-            l--;
-        }
-        if(l > 0){
-            digits[l - 1] += 1;
-            return digits;
-        }
+		while(l > 0 && digits[l - 1] == 9 ){
+			digits[l - 1] = 0;
+			l--;
+		}
+		if(l > 0){
+			digits[l - 1] += 1;
+			return digits;
+		}
         l = digits.length;
-        int[] newDigits = new int[l+1];
-        newDigits[0] = 1;
-        return newDigits;
+		int[] newDigits = new int[l+1];
+		newDigits[0] = 1;
+		return newDigits;
     }
 }
 ```
@@ -305,24 +305,24 @@ public class Solution {
 public class Solution {
     public String addBinary(String a, String b) {
         StringBuilder sb = new StringBuilder();
-        int la = a.length() - 1;
-        int lb = b.length() - 1;
-        int carry = 0;
-        while(la > -1 || lb > -1){
-            int sum = carry;
-            if(la > -1){
-                sum += a.charAt(la--) - '0';
-            }
-            if(lb > -1){
-                sum += b.charAt(lb--) - '0';
-            }
-            sb.append(sum % 2);
-            carry = sum/2;
-        }
-        if(carry != 0){
-            sb.append(carry);
-        }
-        return sb.reverse().toString();
+		int la = a.length() - 1;
+		int lb = b.length() - 1;
+		int carry = 0;
+		while(la > -1 || lb > -1){
+			int sum = carry;
+			if(la > -1){
+				sum += a.charAt(la--) - '0';
+			}
+			if(lb > -1){
+				sum += b.charAt(lb--) - '0';
+			}
+			sb.append(sum % 2);
+			carry = sum/2;
+		}
+		if(carry != 0){
+			sb.append(carry);
+		}
+		return sb.reverse().toString();
     }
 }
 ```
@@ -342,19 +342,19 @@ class Solution(object):
 public class Solution {
     public int climbStairs(int n) {
         if(n <= 0){
-            return 0;
-        }
-        if(n == 1){
-            return 1;
-        }
-        int[] nums = new int[n+1];
-        nums[0] = 0;
-        nums[1] = 1;
-        nums[2] = 2;
-        for(int i = 3; i < n+1; i++){
-            nums[i] = nums[i - 1] + nums[i - 2];
-        }
-        return nums[n];
+			return 0;
+		}
+		if(n == 1){
+			return 1;
+		}
+		int[] nums = new int[n+1];
+		nums[0] = 0;
+		nums[1] = 1;
+		nums[2] = 2;
+		for(int i = 3; i < n+1; i++){
+			nums[i] = nums[i - 1] + nums[i - 2];
+		}
+		return nums[n];
     }
 }
 ```
@@ -641,20 +641,20 @@ class Solution {
 public:
     bool isPalindrome(string s) {
         int i = 0, j = s.length() - 1;
-        while(i < j) {
-            if (!isalnum(s[i])) {
-                i++;
-            }
-            else if (!isalnum(s[j])){
-                j--;
-            }
-            else {
-                if (tolower(s[i++]) != tolower(s[j--])){
-                    return false;   
-                }
-            }
-        }
-        return true;
+    	while(i < j) {
+    		if (!isalnum(s[i])) {
+    		    i++;
+    		}
+    		else if (!isalnum(s[j])){
+    		    j--;
+    		}
+    		else {
+    			if (tolower(s[i++]) != tolower(s[j--])){
+    			    return false;   
+    			}
+    		}
+    	}
+    	return true;
     }
 };
 ```
@@ -983,9 +983,43 @@ public:
 };
 ```
 ### 234. Palindrome Linked List
--- 
+-- reverselist, fast & slow
 ``` cpp
-
+class Solution {
+public:
+    bool isPalindrome(ListNode* head) {
+        if(!head || !head->next){
+            return true;
+        }
+        ListNode* slow=head;
+        ListNode* fast=head;
+        while(fast->next!=NULL&&fast->next->next!=NULL){
+            slow=slow->next;
+            fast=fast->next->next;
+        }
+        slow->next=reverseList(slow->next);
+        slow=slow->next;
+        while(slow){
+            if(head->val!=slow->val){
+                return false;
+            }
+            head=head->next;
+            slow=slow->next;
+        }
+        return true;
+    }
+    ListNode* reverseList(ListNode* head){
+        ListNode* p = NULL;
+        ListNode* q = NULL;
+        while(head){
+            q = head->next;
+            head->next = p;
+            p = head;
+            head = q;
+        }
+        return p;
+    }
+};
 ```
 ### 235. Lowest Common Ancestor of a Binary Search Tree
 -- 严格bst（左边小于root，右边大于root)：Recursive: 左or右 取代 root
@@ -1009,7 +1043,7 @@ public:
 public class Solution {
     public void deleteNode(ListNode node) {
         node.val = node.next.val;
-        node.next = node.next.next;
+	    node.next = node.next.next;
     }
 }
 ```
@@ -1041,12 +1075,12 @@ public class Solution {
 public class Solution {
     public int addDigits(int num) {
         if(num == 0){
-            return 0;
-        }
-        if(num % 9 == 0){
-            return 9;
-        }
-        return num % 9;
+    		return 0;
+    	}
+    	if(num % 9 == 0){
+    		return 9;
+    	}
+    	return num % 9;
     }
 }
 ```
@@ -1059,17 +1093,17 @@ public class Solution {
             return false;
         }
         while(num % 2 == 0){
-            //除以2的1次方
-            num = num << 1;
+	        //除以2的1次方
+        	num = num << 1;
         }
         while(num % 3 == 0){
-            num /= 3;
+        	num /= 3;
         }
         while(num % 5 == 0){
-            num /= 5;
+        	num /= 5;
         }
         if(num == 1){
-            return true;
+        	return true;
         }
         return false;
     }
