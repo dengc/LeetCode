@@ -168,6 +168,21 @@ public class Solution {
     }
 }
 ```
+### 374. Guess Number Higher or Lower
+-- 二分法 k = (min + max) / 2
+``` python
+# @return -1 if my number is lower, 1 if my number is higher, otherwise return 0
+class Solution(object):
+    def guessNumber(self, n):
+        min, max = 1, n;
+        while min < max:
+            k = (min + max) / 2
+            if guess(k) == 1:
+                min = k + 1
+            else:
+                max = k
+        return min
+```
 ### 371. Sum of Two Integers
 -- ^, &, <<1
 ``` java
