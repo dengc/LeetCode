@@ -1083,6 +1083,29 @@ public class Solution {
     }
 }
 ```
+### 257. Binary Tree Paths
+-- Recursion: root + btp左&右
+``` java
+class Solution {
+    public List<String> binaryTreePaths(TreeNode root) {
+        List<String> paths = new LinkedList<>();
+        if(root == null){
+	        return paths;
+        } 
+        if(root.left == null && root.right == null){
+            paths.add(root.val + "");
+            return paths;
+        }
+         for (String node : binaryTreePaths(root.left)) {
+             paths.add(root.val + "->" + node);
+         }
+         for (String node : binaryTreePaths(root.right)) {
+             paths.add(root.val + "->" + node);
+         }
+         return paths;
+    }
+}
+```
 ### 258. Add Digits
 -- 除以9的余数
 ``` java
