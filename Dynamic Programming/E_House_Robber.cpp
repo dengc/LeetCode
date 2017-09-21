@@ -1,5 +1,6 @@
 //198. House Robber
 //result[] store sum of n -> max(with/without the last one)
+//easy
 
 int rob(vector<int>& nums) {
     int l = nums.size();
