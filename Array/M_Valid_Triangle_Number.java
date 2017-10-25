@@ -1,5 +1,5 @@
 //611. Valid Triangle Number
-//从最后一个数算起，以倒数第二个数和第一个数为基点
+//先sort，从最后一个数算起，以倒数第二个数和第一个数为基点
 //Medium
 class Solution {
     public int triangleNumber(int[] nums) {
