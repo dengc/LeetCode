@@ -1,5 +1,5 @@
 //4. Median of Two Sorted Arrays
-//Map: key为array的值，value为array的index 
+//比较两个array，建立新的array
 
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
