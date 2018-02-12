@@ -1,5 +1,5 @@
 //21. Merge Two Sorted Lists
-//recursive: 每次取小为新的node，res->next = mergeTwoLists(l1, l2);
+//recursive: 小的->next = mergeTwoLists(小的->next, 另一个);
 
 class Solution {
 public:
@@ -10,14 +10,12 @@ public:
         if(l2 == NULL){
         	return l1;
         }
-        ListNode* res = new ListNode(l1->val);
-        if(l2->val <= l1->val){
-        	res = new ListNode(l2->val);
-        	l2 = l2->next;
+        if(l1->val <= l2->val){
+        	l1->next = mergeTwoLists(l1->next, l2);
+        	return l1;
         }else{
-        	l1 = l1->next;
+        	l2->next = mergeTwoLists(l1, l2->next);
+            return l2;
         }
-        res->next = mergeTwoLists(l1, l2);
-        return res;
     }
 };
