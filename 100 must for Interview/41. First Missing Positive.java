@@ -1,5 +1,5 @@
 //41. First Missing Positive
-//
+//每个数:swap到他相对应的index上
 
 class Solution {
     public int firstMissingPositive(int[] nums) {
