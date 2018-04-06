@@ -1,8 +1,8 @@
-//207. Course Schedule
+//210. Course Schedule II
 //左边数为noTake set, 剩下的为take ArrayList, 与右边数一一对应, 合格的数放进list
 
 class Solution {
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
         int l = prerequisites.length;
         Set<Integer> noTake = new HashSet<>();
         for(int i = 0; i < l; i++){
@@ -31,6 +31,19 @@ class Solution {
         		}
         	}
         }
-        return (take.size() == numCourses) || (l == 0);
+        int[] res = new int[numCourses];
+        if(l == 0){
+        	for(int i = 0; i < numCourses; i++){
+        		res[i] = i;
+        	}
+        	return res;
+        }
+        if(take.size() == numCourses){
+			for(int i = 0; i < take.size(); i++){
+	        	res[i] = take.get(i);
+	        }
+	        return res;
+        }        
+        return new int[0];
     }
 }
