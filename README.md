@@ -51,3 +51,147 @@
 
 <i>844. Backspace String Compare
 - 建新string res：遇到’#’, 删去最后一个char -> res = res[:len(res) - 1]
+
+### Linked List
+<i> 2. Add Two Numbers
+- recursive
+
+<i>21. Merge Two Sorted Lists
+- recursive: 小的list->next = mergeTwoLists(小的list->next, 另一个list)     
+
+<i>23. Merge k Sorted Lists
+- 用mergeTwoLists，直到只有一个list
+
+<i>82. Remove Duplicates from Sorted List II
+- 在head前建个ListNode(0)连接head；对于每一个val，比较自己和next
+
+<i>141. Linked List Cycle
+- slow = next; fast = next.next; 看能不能有一刻 slow = fast
+
+<i>160. Intersection of Two Linked Lists
+- 分别从头next, 到null后换到另外的head持续next，直到相遇
+
+### Tree
+<i>116. Populating Next Right Pointers in Each Node
+- 先连left & right, 如果有next, 连right & next.left; 逐层往下
+- 
+<i>124. Binary Tree Maximum Path Sum
+- subPath: sub左&右; res = val + 左 + 右; return val + max(左，右）
+
+<i>145. Binary Tree Postorder Traversal
+- stack放root, pop; insert在arr最前；stack放左，放右
+
+<i>94. Binary Tree Inorder Traversal
+- inorder(左)；arr.append(自己)；inorder(右)
+
+<i>230. Kth Smallest Element in a BST
+- BST变sorted list: inorder
+
+<i>114. Flatten Binary Tree to Linked List
+- flat(左), flat(右)；把left放右边，把right放left右边
+
+<i>102. Binary Tree Level Order Traversal
+- 2D list: res[depth].append(val); build(左, d+1), build(右, d+1)
+
+<i>103. Binary Tree Zigzag Level Order Traversal
+- same as 102, if depth是奇数，insert头；偶数就append
+
+<i>104. Maximum Depth of Binary Tree
+- max(maxDepth(root->left), maxDepth(root->right)) + 1
+
+<i>108. Convert Sorted Array to Binary Search Tree
+- mid处建new tree；mid左（nums,low, mid-1），mid右（nums,mid+1,high）
+
+### Array
+<i>66. Plus One
+- 从后往前，while 是9就让其等于0
+
+<i>134. Gas Station
+- 对于每个数，sum(gas - cost)，若<0, 则从下一站开始
+
+<i>55. Jump Game
+- 对于每个数，自己最远距离dis = i+ nums[i], 此前一共f = max(f, dis)
+<i>56. Merge Intervals
+- 建2个array，分别sort start[] 和 end[]; 比较start[i]和end[i-1]比较，变化start里的数
+
+#### max & min:
+<i>53. Maximum Subarray
+- 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
+
+<i>152. Maximum Product Subarray
+- 对于每个数：算出带上自己的max和min; res = max(res,max)
+
+<i>121. Best Time to Buy and Sell Stock
+- 对于每个数：min = min(min, 自己)； max = max(max, 自己 - min)
+
+<i>122. Best Time to Buy and Sell Stock II
+- 如果后一个数大，则减去前一个数
+
+<i>123. Best Time to Buy and Sell Stock III
+- 借用121，而后 min2 = min(min2, 自己 - max1)
+
+<i>188. Best Time to Buy and Sell Stock IV
+
+<i>84. Largest Rectangle in Histogram
+
+#### Sort
+<i>4. Median of Two Sorted Arrays
+- merge into a new sorted array
+
+<i>88. Merge Sorted Array
+- 从大到小insert，index = m + n - 1 开始
+
+### 2D Array
+<i>54. Spiral Matrix
+- 分别4个for loop: 右下左上
+
+### Palindromic
+<i>5. Longest Palindromic Substring
+- 判断isPalindrome(s, i-currLength-1, i) 还是 isPalindrome(s, i-currLength, i)
+
+### 应用题
+<i>11. Container With Most Water
+- right & left: 两头往中间并
+
+<i>17. Letter Combinations of a Phone Number
+<i>12. Integer to Roman
+<i>13. Roman to Integer
+<i>118. Pascal's Triangle
+<i>119. Pascal's Triangle II
+<i>149. Max Points on a Line
+<i>174. Dungeon Game
+
+## Methods
+-------------------
+### DP
+<i>72. Edit Distance
+- 建new 2D：数字，看左上、左、上
+
+<i>91. Decode Ways
+- 建new arr[]: 遇0放0，从右往左，memo[i] = memo[i+1]+memo[i+2] 或 memo[i] = memo[i+1];
+
+### Two Pointers (一头一尾...)
+<i>11. Container With Most Water
+<i>15. 3Sum
+
+### dictionary/hashmap
+<i>1. Two Sum
+<i>49. Group Anagrams
+- key为sort后的每个str; value为list: 每个对应key的str
+
+### Queue - FIFO
+<i>17. Letter Combinations of a Phone Number
+
+### Stack
+<i>150. Evaluate Reverse Polish Notation
+<i>145. Binary Tree Postorder Traversal
+- stack放root, pop; insert在arr最前；stack放左，放右
+
+### swap
+<i>41. First Missing Positive
+- while每个地方数: swap到他相对应的index上
+
+
+## 其他
+-------------------
+厉害了：22，29，31，39, 43, 493， 105，72, 174，84
