@@ -30,6 +30,10 @@
 <i>833. Find And Replace in String
 - 根据targets[i] 和 sources[i]长度diff，改变indexes里的index，仅改变更大的index
 
+<i> 824. Goat Latin
+- word += 'a' *(i+1) 用乘法不用loop
+
+
 #### Parentheses
 <i>20. Valid Parentheses
 - do while loop -> str.replace
@@ -114,7 +118,7 @@
 <i>56. Merge Intervals
 - 建2个array，分别sort start[] 和 end[]; 比较start[i]和end[i-1]比较，变化start里的数
 
-#### max & min:
+#### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
 
