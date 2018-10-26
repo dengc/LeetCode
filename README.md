@@ -10,7 +10,8 @@
 ## Types
 -------------------
 ### String
-<i>842. Split Array into Fibonacci Sequence
+<i>816. Ambiguous Coordinates
+- compare S[i] 和 w[j], 不等的话看S[i] 和S[i-1]以及S[i+1]是否等；或看S[i] 和S[i-1]以及S[i-2]
 
 <i>916. Word Subsets
 - collections.Counter()
@@ -198,4 +199,4 @@
 
 ## 其他
 -------------------
-厉害了：22，29，31，39, 43, 493， 105，72, 174，84
+厉害了：22，29，31，39, 43, 493， 105，72, 174，84, 842
