@@ -34,6 +34,8 @@
 <i> 824. Goat Latin
 - word += 'a' *(i+1) 用乘法不用loop
 
+<i> 816. Ambiguous Coordinates
+- 看一个数，return其可能的list：if首char为0；最后一个char为0
 
 #### Parentheses
 <i>20. Valid Parentheses
