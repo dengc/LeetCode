@@ -186,6 +186,9 @@
 <i>49. Group Anagrams
 - key为sort后的每个str; value为list: 每个对应key的str
 
+<i>791. Custom Sort String
+- key为S的char; value为其对应index：在res中比较dic[t] 和 dic[res[index]]
+
 ### Queue - FIFO
 <i>17. Letter Combinations of a Phone Number
 
