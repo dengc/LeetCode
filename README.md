@@ -37,6 +37,9 @@
 <i> 816. Ambiguous Coordinates
 - 看一个数，return其可能的list：if首char为0；最后一个char为0
 
+<i>767. Reorganize String
+- 先按count sort S, 前一半char放在奇数index上(a[1::2]), 后一半放偶数index上(a[::2])
+
 #### Parentheses
 <i>20. Valid Parentheses
 - do while loop -> str.replace
