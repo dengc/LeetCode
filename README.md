@@ -40,6 +40,13 @@
 <i>767. Reorganize String
 - 先按count sort S, 前一半char放在奇数index上(a[1::2]), 后一半放偶数index上(a[::2])
 
+#### Palindromic
+<i>5. Longest Palindromic Substring
+- 判断isPalindrome(s, i-currLength-1, i) 还是 isPalindrome(s, i-currLength, i)
+
+<i> 647. Palindromic Substrings
+- 从头到尾以此判断 s == s[::-1] (O(n^2))
+- 
 #### Parentheses
 <i>20. Valid Parentheses
 - do while loop -> str.replace
@@ -51,14 +58,14 @@
 <i>678. Valid Parenthesis String
 - 2 stacks: 第一个从左往右装，遇到 ')' 就pop; 第二个从右往左装，遇到 '(' 就pop
 
-### Subsequence
+#### Subsequence
 <i>128. Longest Consecutive Sequence
 - Set: for every num while num++ and num— 在不在set里
 
 <i>792. Number of Matching Subsequences
 - 对于每一个char, index在前一个char的后面：index = s.find(char, index+1)
 
-### Substring
+#### Substring
 <i>3. Longest Substring Without Repeating Characters
 - Set: remove char from head of string
 
@@ -157,10 +164,6 @@
 ### 2D Array
 <i>54. Spiral Matrix
 - 分别4个for loop: 右下左上
-
-### Palindromic
-<i>5. Longest Palindromic Substring
-- 判断isPalindrome(s, i-currLength-1, i) 还是 isPalindrome(s, i-currLength, i)
 
 ### 应用题
 <i>11. Container With Most Water
