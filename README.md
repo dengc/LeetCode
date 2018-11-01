@@ -48,6 +48,9 @@
 <i>856. Score of Parentheses
 - stack: s[-1]为’(’ 装1，否则sum += s.pop()
 
+<i>678. Valid Parenthesis String
+- 2 stacks: 第一个从左往右装，遇到 ')' 就pop; 第二个从右往左装，遇到 '(' 就pop
+
 ### Subsequence
 <i>128. Longest Consecutive Sequence
 - Set: for every num while num++ and num— 在不在set里
@@ -207,4 +210,4 @@
 
 ## 其他
 -------------------
-厉害了：22，29，31，39, 43, 493， 105，72, 174，84, 842
+厉害了：22，29，31，39, 43, 493， 105，72, 174，84, 842，722
