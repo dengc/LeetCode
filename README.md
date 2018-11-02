@@ -198,6 +198,9 @@
 <i>791. Custom Sort String
 - key为S的char; value为其对应index：在res中比较dic[t] 和 dic[res[index]]
 
+<i>609. Find Duplicate File in System
+- key 为content = p[p.find('(', i):p.find(')', i)+1]; value为其对应path
+
 ### Queue - FIFO
 <i>17. Letter Combinations of a Phone Number
 
