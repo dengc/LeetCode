@@ -40,13 +40,16 @@
 <i>767. Reorganize String
 - 先按count sort S, 前一半char放在奇数index上(a[1::2]), 后一半放偶数index上(a[::2])
 
+<i>556. Next Greater Element III
+- 倒着比，直到st[i-1] < st[i]; reverse st[i:]; swap st[i-1] 和 st[i++] 直到比n大
+
 #### Palindromic
 <i>5. Longest Palindromic Substring
 - 判断isPalindrome(s, i-currLength-1, i) 还是 isPalindrome(s, i-currLength, i)
 
 <i> 647. Palindromic Substrings
 - 从头到尾以此判断 s == s[::-1] (O(n^2))
-- 
+
 #### Parentheses
 <i>20. Valid Parentheses
 - do while loop -> str.replace
