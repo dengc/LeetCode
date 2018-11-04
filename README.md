@@ -41,7 +41,10 @@
 - 先按count sort S, 前一半char放在奇数index上(a[1::2]), 后一半放偶数index上(a[::2])
 
 <i>556. Next Greater Element III
-- 倒着比，直到st[i-1] < st[i]; reverse st[i:]; swap st[i-1] 和 st[i++] 直到比n大
+- 倒着比，直到st[i-1] < st[i]; reverse st[i:]; swap st[i-1] 和 st[i++] 直到比n
+
+<i>553. Optimal Division
+- 第一个数/ (后面所有数的商)：nums[0]+'/('+'/'.join(nums[1:])+')'
 
 #### Palindromic
 <i>5. Longest Palindromic Substring
@@ -188,6 +191,8 @@
 
 <i>91. Decode Ways
 - 建new arr[]: 遇0放0，从右往左，memo[i] = memo[i+1]+memo[i+2] 或 memo[i] = memo[i+1];
+
+<i>583. Delete Operation for Two Strings
 
 ### Two Pointers (一头一尾...)
 <i>11. Container With Most Water
