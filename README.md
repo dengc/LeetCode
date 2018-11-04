@@ -41,10 +41,13 @@
 - 先按count sort S, 前一半char放在奇数index上(a[1::2]), 后一半放偶数index上(a[::2])
 
 <i>556. Next Greater Element III
-- 倒着比，直到st[i-1] < st[i]; reverse st[i:]; swap st[i-1] 和 st[i++] 直到比n
+- 倒着比，直到st[i-1] < st[i]; reverse st[i:]; swap st[i-1] 和 st[i++] 直到比n大
 
 <i>553. Optimal Division
 - 第一个数/ (后面所有数的商)：nums[0]+'/('+'/'.join(nums[1:])+')'
+
+<i>539. Minimum Time Difference
+- 变成分钟；sort后相邻差值；超12点的减去1440，再sort后相邻差值
 
 #### Palindromic
 <i>5. Longest Palindromic Substring
@@ -137,6 +140,7 @@
 
 <i>55. Jump Game
 - 对于每个数，自己最远距离dis = i+ nums[i], 此前一共f = max(f, dis)
+
 <i>56. Merge Intervals
 - 建2个array，分别sort start[] 和 end[]; 比较start[i]和end[i-1]比较，变化start里的数
 
