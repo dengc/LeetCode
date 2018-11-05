@@ -58,6 +58,8 @@
 <i>151. Reverse Words in a String
 - " ".join(list(s.split()[::-1]))
 
+<i>93. Restore IP Addresses
+- 3个for loop嵌套。当心leading zeros：len(ip1) == len(str(int(ip1)))
 #### Palindromic
 <i>5. Longest Palindromic Substring
 - 判断isPalindrome(s, i-currLength-1, i) 还是 isPalindrome(s, i-currLength, i)
