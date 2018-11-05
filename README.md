@@ -49,6 +49,9 @@
 <i>539. Minimum Time Difference
 - 变成分钟；sort后相邻差值；超12点的减去1440，再sort后相邻差值
 
+<i>165. Compare Version Numbers
+- 注意：1 = 1.0.0
+
 #### Palindromic
 <i>5. Longest Palindromic Substring
 - 判断isPalindrome(s, i-currLength-1, i) 还是 isPalindrome(s, i-currLength, i)
