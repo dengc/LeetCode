@@ -72,7 +72,10 @@
 - Set: for every num while num++ and num— 在不在set里
 
 <i>792. Number of Matching Subsequences
-- 对于每一个char, index在前一个char的后面：index = s.find(char, index+1)
+- isSub(): 对于每一个char, index在前一个char的后面：index = s.find(char, index+1)
+
+<i>522. Longest Uncommon Subsequence II
+- 按len倒序sort，看每一个str和前面的所有str是否isSub()
 
 #### Substring
 <i>3. Longest Substring Without Repeating Characters
