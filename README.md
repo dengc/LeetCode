@@ -52,6 +52,9 @@
 <i>165. Compare Version Numbers
 - 注意：1 = 1.0.0
 
+<i>468. Validate IP Address
+- IPv6 字母只能是 ‘ABCDEF’
+
 #### Palindromic
 <i>5. Longest Palindromic Substring
 - 判断isPalindrome(s, i-currLength-1, i) 还是 isPalindrome(s, i-currLength, i)
