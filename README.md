@@ -162,6 +162,9 @@
 <i>56. Merge Intervals
 - 建2个array，分别sort start[] 和 end[]; 比较start[i]和end[i-1]比较，变化start里的数
 
+<i>915. Partition Array into Disjoint Intervals
+- 从左往右找left最大; 从右往左找right最小
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
