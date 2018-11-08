@@ -165,6 +165,9 @@
 <i>915. Partition Array into Disjoint Intervals
 - 从左往右找left最大; 从右往左找right最小
 
+<i>870. Advantage Shuffle
+- sort(A), 按index sort(B); 比较A和B 最大的数: A[end] > B[i], 则A[end], 否则A[start]
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
