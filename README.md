@@ -171,6 +171,9 @@
 <i>907. Sum of Subarray Minimums
 - 截止到第i个数，看前面每个sub的最小
 
+<i>825. Friends Of Appropriate Ages
+- collections.Counter(ages)，O(n2)比较, 注意K1 == K2
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
