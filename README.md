@@ -168,6 +168,9 @@
 <i>870. Advantage Shuffle
 - sort(A), 按index sort(B); 比较A和B 最大的数: A[end] > B[i], 则A[end], 否则A[start]
 
+<i>907. Sum of Subarray Minimums
+- 截止到第i个数，看前面每个sub的最小
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
