@@ -177,6 +177,9 @@
 <i>775. Global and Local Inversions
 - abs(A[i] - i) > 1 则 false
 
+<i>795. Number of Subarrays with Bounded Maximum
+- 两个pointer：left和right；大于R, left = i; 大于等于，right = i; 每次res += right - left
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
