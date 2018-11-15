@@ -174,6 +174,9 @@
 <i>825. Friends Of Appropriate Ages
 - collections.Counter(ages)，O(n2)比较, 注意K1 == K2
 
+<i>775. Global and Local Inversions
+- abs(A[i] - i) > 1 则 false
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
@@ -258,4 +261,4 @@
 
 ## 其他
 -------------------
-厉害了：22，29，31，39, 43, 493， 105，72, 174，84, 842，722
+厉害了：22，29，31，39, 43, 493， 105，72, 174，84, 842，722, 835, 
