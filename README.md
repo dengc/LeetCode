@@ -180,6 +180,9 @@
 <i>795. Number of Subarrays with Bounded Maximum
 - 两个pointer：left和right；大于R, left = i; 大于等于，right = i; 每次res += right - left
 
+<i>769. Max Chunks To Make Sorted
+- 每个数：maxi = max(arr[i], maxi); 比较max == i
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
