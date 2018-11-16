@@ -183,6 +183,9 @@
 <i>769. Max Chunks To Make Sorted
 - 每个数：maxi = max(arr[i], maxi); 比较max == i
 
+<i>565. Array Nesting
+- 对于每个数：轮过一个数，让其变-1
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
