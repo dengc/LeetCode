@@ -210,6 +210,9 @@
 
 <i>188. Best Time to Buy and Sell Stock IV
 
+<i>714. Best Time to Buy and Sell Stock with Transaction Fee
+- 每次buy点为小值 min(buy, p)；若p - fee > buy: 结算一次，再让buy = p - fee
+
 <i>84. Largest Rectangle in Histogram
 
 #### Sort
