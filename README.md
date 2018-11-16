@@ -186,6 +186,9 @@
 <i>565. Array Nesting
 - 对于每个数：轮过一个数，让其变-1
 
+<i>442. Find All Duplicates in an Array
+- 对于每个数：让其对应index上的数 * -1
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
