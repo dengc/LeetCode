@@ -192,6 +192,11 @@
 <i>621. Task Scheduler
 - max(tasks.length, ( 最大频率数 - 1)*(n+1) + 有几个最大频率)
 
+<i>78. Subsets
+- Recursive: append sub(nums[-1])里的list, 以及每个list append(nums[-1])
+
+
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
@@ -251,6 +256,8 @@
 - 建new arr[]: 遇0放0，从右往左，memo[i] = memo[i+1]+memo[i+2] 或 memo[i] = memo[i+1];
 
 <i>583. Delete Operation for Two Strings
+
+<i>718. Maximum Length of Repeated Subarray
 
 ### Two Pointers (一头一尾...)
 <i>11. Container With Most Water
