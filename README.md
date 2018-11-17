@@ -195,7 +195,8 @@
 <i>78. Subsets
 - Recursive: append sub(nums[-1])里的list, 以及每个list append(nums[-1])
 
-
+<i>90. Subsets II
+- same as 78. Subsets; 每一次sort，相邻等则取其一
 
 #### max & min
 <i>53. Maximum Subarray
