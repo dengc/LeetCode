@@ -204,6 +204,9 @@
 <i>40. Combination Sum II
 - same as <i>39. Combination Sum。</i> 另外，建新list[全是false]，true，再backtracking(i+1, rest-candidates[i])，再false
 
+<i>216. Combination Sum III
+- same as <i>39. Combination Sum。</i> 多一个k，backtracking(i+1, rest-i, k-1)
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
