@@ -207,6 +207,9 @@
 <i>216. Combination Sum III
 - same as <i>39. Combination Sum。</i> 多一个k，backtracking(i+1, rest-i, k-1)
 
+<i>238. Product of Array Except Self
+- 从左到右：res[i] = res[i-1] * nums[i-1]；从右到左：res[i] x= p, p x= nums[i]
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
