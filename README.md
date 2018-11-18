@@ -198,6 +198,9 @@
 <i>90. Subsets II
 - same as 78. Subsets; 每一次sort，相邻等则取其一
 
+<i>39. Combination Sum
+- i从start到最后一个数：backtracking(i, rest-candidates[i])
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
