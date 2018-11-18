@@ -199,7 +199,10 @@
 - same as 78. Subsets; 每一次sort，相邻等则取其一
 
 <i>39. Combination Sum
-- i从start到最后一个数：backtracking(i, rest-candidates[i])
+- i从start到最后一个数：append, 再backtracking(i, rest-candidates[i])，再pop
+
+<i>40. Combination Sum II
+- same as <i>39. Combination Sum。</i> 另外，建新list[全是false]，true，再backtracking(i+1, rest-candidates[i])，再false
 
 #### max & min
 <i>53. Maximum Subarray
