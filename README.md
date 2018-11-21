@@ -213,6 +213,9 @@
 <i>209. Minimum Size Subarray Sum
 - left and right pointer 一起往右滑，sum和s比较：sum大，left ++
 
+<i>34. Find First and Last Position of Element in Sorted Array
+- 二分法：mid = (r + l) // 2；然后O(n)其左右
+
 #### max & min
 <i>53. Maximum Subarray
 - 对于每个数，加进sum; 取max; 若sum为负，令sum = 0
