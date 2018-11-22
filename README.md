@@ -253,6 +253,9 @@
 <i>695. Max Area of Island
 - dfs(i, j, grid): recursive 上下左右，把1变0
 
+<i>59. Spiral Matrix II
+- Initial: res = [[0 for x in range(n)] for y in range(n)] ; flag 分别等于 right,down,left,up
+
 ### 应用题
 <i>11. Container With Most Water
 - right & left: 两头往中间并
